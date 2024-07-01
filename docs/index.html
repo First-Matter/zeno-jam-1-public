@@ -24,6 +24,7 @@
         document.body.style.textAlign = "left";
       }
 
+      var unityInstance = null;
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/WebGL.data",
         frameworkUrl: "Build/WebGL.framework.js",
@@ -34,7 +35,16 @@
         productVersion: "1.0",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((instance) => {
+        unityInstance = instance;
       });
+
+      document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+          if (unityInstance) {
+            unityInstance.SendMessage('GameInitialization', 'PauseGame');
+          }
+        }});
     </script>
   </body>
 </html>
