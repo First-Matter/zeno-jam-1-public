@@ -42,9 +42,14 @@
       document.addEventListener("visibilitychange", function() {
         if (document.hidden) {
           if (unityInstance) {
-            unityInstance.SendMessage('GameSettings', 'PauseGame');
+            unityInstance.SendMessage('GameSettings', 'Pause');
           }
-        }});
+        } else {
+          if (unityInstance) {
+            unityInstance.SendMessage('GameSettings', 'UnPause');
+          }
+        }
+      });
     </script>
   </body>
 </html>
