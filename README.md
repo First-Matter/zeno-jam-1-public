@@ -4,5 +4,5 @@
 |-------------------|-------------------------------------------------------------------------|
 | **Deployed URL**  | [View the deployed site](https://first-matter.github.io/zeno-jam-1-public)                                    |
 | **Commit**        | develop                                                                 |
-| **Branch**        | 4396f44da3b09ba28429ade98a01d72a6c674dd7                                                                 |
+| **Branch**        | 585049786cdadb9f194aa907f4c25635acdab948                                                                 |
 | **Workflow**      | Local Build by cruxial-x                   |
